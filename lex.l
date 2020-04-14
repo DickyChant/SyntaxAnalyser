@@ -73,7 +73,7 @@ STARTWITH_SHARP_LINE ^["#"].*\n
 ">>="			{ show(yytext, "RSHIFT_ASSIGN"); yylval = addASTNode(ASTNode_RSHIFT_ASSIGN, NULL); return RSHIFT_ASSIGN; }
 "&="			{ show(yytext, "BIT_AND_ASSIGN"); yylval = addASTNode(ASTNode_BIT_AND_ASSIGN, NULL); return BIT_AND_ASSIGN; }
 "^="			{ show(yytext, "BIT_XOR_ASSIGN"); yylval = addASTNode(ASTNode_BIT_XOR_ASSIGN, NULL); return BIT_XOR_ASSIGN; }
-"|="			{ show(yytext, "BIT_OR_ASSIGN"); return yylval = addASTNode(ASTNode_BIT_OR_ASSIGN, NULL); BIT_OR_ASSIGN; }
+"|="			{ show(yytext, "BIT_OR_ASSIGN"); yylval = addASTNode(ASTNode_BIT_OR_ASSIGN, NULL); return BIT_OR_ASSIGN; }
 ","			{ show(yytext, "COMMA"); yylval = addASTNode(ASTNode_COMMA, NULL); return COMMA; }
 ":"			{ show(yytext, "COLON"); yylval = addASTNode(ASTNode_COLON, NULL); return COLON; }
 ";"			{ show(yytext, "SEMICOLON"); yylval = addASTNode(ASTNode_SEMICOLON, NULL); return SEMICOLON; }
